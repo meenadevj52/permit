@@ -4,7 +4,7 @@ services:
   web:
     build: .
     command: >
-      sh -c "python manage.py migrate &&
+      sh -c "python manage.py migrate && python manage.py seed &&
              gunicorn residential_parking_permit.wsgi:application --bind 0.0.0.0:8000"
     ports:
       - "8000:8000"
