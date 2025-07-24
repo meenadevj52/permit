@@ -6,6 +6,5 @@ from .models import Permit
 @shared_task
 def expire_old_pending_permits():
   threshold_time = timezone.now() - timedelta(minutes=5)
-  expired_permits = Permit.objects.filter(status='pending', created_at__lt=threshold_time)
-  count = expired_permits.update(status='expired')
+  count = Permit.objects.filter(status='pending', created_at__lt=threshold_time).update(status='expired')
   print(f"[Task] Expired {count} permits.")
