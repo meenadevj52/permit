@@ -1,0 +1,26 @@
+# Core dependencies
+Django==5.2.4
+gunicorn
+djangorestframework==3.16.0
+djangorestframework_simplejwt==5.5.1
+django-environ==0.12.0
+django-celery-beat==2.8.1
+django-timezone-field==7.1
+python-decouple==3.8
+python-dateutil==2.9.0.post0
+sqlparse==0.5.3
+pytz==2025.2
+tzdata==2025.2
+
+# Celery + Redis
+celery==5.5.3
+redis==6.2.0
+billiard==4.2.1
+amqp==5.3.1
+flower==2.0.1
+
+# Dev tools
+black==25.1.0
+isort==6.0.1
+pytest==8.4.1
+pytest-django==4.11.1
