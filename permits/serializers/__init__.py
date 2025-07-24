@@ -1,0 +1,1 @@
+from .permit_serializers import PermitSerializer
